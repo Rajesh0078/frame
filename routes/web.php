@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[AppRouteController::class,'index'])->name('index');
 Route::get('/about-us', [AppRouteController::class, 'aboutUs'])->name('about-us');
+Route::get('/how-we-work', [AppRouteController::class, 'howWeWork'])->name('how-we-work');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AppRouteController::class, 'login'])->name('login');

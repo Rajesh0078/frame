@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoHeart, GoPerson } from 'react-icons/go'
-import { router, usePage } from '@inertiajs/react';
+import { Link, router, usePage } from '@inertiajs/react';
 
 const Header = () => {
 
@@ -25,21 +25,26 @@ const Header = () => {
                     <h5>We deliver to you every day from 7:00 to 23:00</h5>
                 </div>
                 <div className='flex items-center gap-[15px]'>
-                    <h5>Eng</h5>
+                    <h5 className='cursor-pointer' onClick={() => router.visit('/how-we-work')}>How we work</h5>
                     <h5 className='cursor-pointer'>Contact us</h5>
                     <h5 className='cursor-pointer'>Order Tracking</h5>
                 </div>
             </div>
-            <header className='px-[4%] sticky top-0 border-b border-primary-border py-4 bg-white flex items-center gap-6'>
-                <img src="/assets/logo.svg" alt="" className='w-[164px]' />
-                <div className='w-full bg-slate-200 h-10'></div>
-                <div className='flex items-center gap-4 tetx-xl'>
-                    <div>
-                        <GoPerson className='text-xl' />
+            <header className='sticky top-0 bg-white'>
+                <div className='flex items-center gap-6 px-[4%] py-4'>
+                    <Link href='/' className='w-[204px]'><img src="/assets/logo.svg" alt="" className='w-[164px]' /></Link>
+                    <div className='w-full bg-slate-200 h-10'></div>
+                    <div className='flex items-center gap-4 tetx-xl'>
+                        <div>
+                            <GoPerson className='text-xl' />
+                        </div>
+                        <button>
+                            <GoHeart className='text-xl' />
+                        </button>
                     </div>
-                    <button>
-                        <GoHeart className='text-xl' />
-                    </button>
+                </div>
+                <div className='h-11 w-full border-b border-primary-border px-[4%] flex'>
+                    <div className='w-[300px] border border-b-transparent  border-primary-border rounded-tl-[8px] rounded-tr-[8px] h-full'></div>
                 </div>
             </header>
         </>

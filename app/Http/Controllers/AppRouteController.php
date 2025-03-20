@@ -35,10 +35,15 @@ class AppRouteController extends Controller
     {
         return Inertia::render('categories');
     }
-    
+
     public function aboutUs(Request $request): Response
     {
         return Inertia::render('AboutUs');
+    }
+
+    public function howWeWork(Request $request): Response
+    {
+        return Inertia::render('HowWeWork');
     }
 
     public function dashboard(Request $request): Response
