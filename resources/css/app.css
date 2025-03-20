@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+* {
+    font-family: "Noto Sans", sans-serif;
+}
+
+@theme {
+    --color-primary: #155DFC;
+    --color-dark: #262A2A;
+    --color-secondary: #6C6C6C;
+    --color-secondary-2: #F6F6F6;
+    --color-bdr-primary: #E8E8E8;
+    --leading-primary: 1.4
+}
+
+@layer {
+    p {
+        @apply text-[14px] font-normal text-secondary leading-primary
+    }
+
+    h2 {
+        @apply text-[20px] font-bold text-dark
+    }
+
+    h3 {
+        @apply text-[14px] font-semibold text-dark
+    }
+
+    h6 {
+        @apply text-[12px] font-semibold text-[#6F6F6F] uppercase mb-[14px];
+    }
+
+    input {
+        @apply border border-bdr-primary w-full text-[#6F6F6F] text-[14px] rounded-[5px] leading-1.5 min-h-[42px] bg-white outline-none;
+        padding: 0.5rem 0.85rem;
+        box-shadow: 0px 4px 4px 0px rgba(219, 219, 219, 0.2509803922);
+    }
+
+    label {
+        @apply text-dark font-medium text-[14px] py-[5px];
+    }
+
+    button {
+        @apply w-full cursor-pointer
+    }
+}
+
+
+@layer utilities {
+    .flex-center {
+        @apply flex justify-center items-center
+    }
+
+    .btn-primary {
+        @apply w-full text-[14px] font-semibold bg-primary/85 hover:bg-primary text-white py-2 px-[14px] rounded-[5px] transition-all ease-in-out duration-300 cursor-pointer
+    }
+}
+
+@utility scrollbar-hidden {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
