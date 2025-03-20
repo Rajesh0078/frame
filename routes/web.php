@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppRouteController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[AppRouteController::class,'index'])->name('index');
@@ -33,4 +34,5 @@ Route::middleware('auth')->group(function () {
 Route::prefix('api')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('api.login');
     Route::post('/logout', [AuthController::class, 'logout'])->name('api.logout');
+    Route::post('/users/register', [UserController::class, 'createOrUpdateUser'])->name('users.createOrUpdate');
 });

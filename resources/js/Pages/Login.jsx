@@ -47,7 +47,6 @@ const Login = () => {
                 <div className='w-full sm:w-[500px] sm:bg-white sm:shadow sm:px-10 sm:py-8 rounded-[5px]'>
                     <div className='w-full flex-center mb-8 font-bold gap-2 text-[22px] text-dark'>
                         <img src={Logo} alt="" className='w-[180px]' />
-
                     </div>
                     <h2 className='mb-1'>Sign In</h2>
                     <p className='mb-4'>Access the frame up account using your email and password.</p>
@@ -99,7 +98,7 @@ const Login = () => {
                             Facebook
                         </button>
                     </div>
-                    <p className='mt-6 text-center'>Copyright © {new Date().getFullYear()} - One Way</p>
+                    <p className='mt-6 text-center'>Copyright © {new Date().getFullYear()} - Frame Up</p>
                 </div>
             </div>
         </>
