@@ -50,7 +50,7 @@ const Login = () => {
 
                     </div>
                     <h2 className='mb-1'>Sign In</h2>
-                    <p className='mb-4'>Access the one way panel using your email and passcode.</p>
+                    <p className='mb-4'>Access the frame up account using your email and password.</p>
                     <form onSubmit={handleSubmit(loginHandler)}>
                         <div className='flex flex-col gap-3'>
                             <FormInput
