@@ -12,18 +12,16 @@ const Sidebar = () => {
         { name: 'Categories', path: '/admin/categories', icon: CiGrid31 },
     ]
 
-
     const layouts = [
         { name: 'Banners', path: '/admin/banners', icon: CiGrid41 },
     ]
 
-
     return (
         <aside className='min-w-[275px]'>
             <div className='w-full flex h-[64px] px-[15px]'>
-                <div className='flex-center font-bold gap-2 text-[20px] text-dark'>
+                <Link href='/' className='flex-center font-bold gap-2 text-[20px] text-dark'>
                     <img src={Logo} alt="" className='w-[154px]' />
-                </div>
+                </Link>
             </div>
             <div className='px-[15px]'>
                 <div className='h-[62px] bg-[#F6F6F6] mb-6 rounded-[5px] flex items-center p-[10px] gap-2'>

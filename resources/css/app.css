@@ -6,9 +6,13 @@
 }
 
 @theme {
-    --color-primary: #155DFC;
+    --color-primary: #0059A9;
+    --color-secondary: #F66F21;
+    --color-light: #6B7280;
+    --color-primary-border:#E5E7EB;
+    /* --color-primary: #155DFC; */
     --color-dark: #262A2A;
-    --color-secondary: #6C6C6C;
+    --color-secondary-3: #6C6C6C;
     --color-secondary-2: #F6F6F6;
     --color-bdr-primary: #E8E8E8;
     --leading-primary: 1.4
@@ -16,7 +20,7 @@
 
 @layer {
     p {
-        @apply text-[14px] font-normal text-secondary leading-primary
+        @apply text-[14px] font-normal text-secondary-3 leading-primary
     }
 
     h2 {
@@ -25,6 +29,10 @@
 
     h3 {
         @apply text-[14px] font-semibold text-dark
+    }
+
+    h5{
+        @apply text-[12px] font-medium text-light leading-[-0.32px]
     }
 
     h6 {

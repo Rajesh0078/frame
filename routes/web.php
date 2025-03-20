@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[AppRouteController::class,'index'])->name('index');
+Route::get('/about-us', [AppRouteController::class, 'aboutUs'])->name('about-us');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AppRouteController::class, 'login'])->name('login');
