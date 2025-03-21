@@ -23,6 +23,8 @@ class UserController extends Controller
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($userId)],
             'password' => [$userId ? 'nullable' : 'required', 'string', 'min:8'],
             'role' => ['nullable', 'string', 'exists:roles,slug'],
+            'phone' => ['nullable', 'string', 'max:255'],
+            'country' => ['nullable', 'string', 'max:255'],
         ]);
     
         if (!$userId) {

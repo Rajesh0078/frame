@@ -9,13 +9,13 @@
     --color-primary: #0059A9;
     --color-secondary: #F66F21;
     --color-light: #6B7280;
-    --color-primary-border:#E5E7EB;
+    --color-primary-border: #E5E7EB;
     /* --color-primary: #155DFC; */
     --color-dark: #262A2A;
     --color-secondary-3: #6C6C6C;
     --color-secondary-2: #F6F6F6;
     --color-bdr-primary: #E8E8E8;
-    --leading-primary: 1.4
+    --leading-primary: 1.4;
 }
 
 @layer {
@@ -31,7 +31,7 @@
         @apply text-[14px] font-semibold text-dark
     }
 
-    h5{
+    h5 {
         @apply text-[12px] font-medium text-light leading-[-0.32px]
     }
 
@@ -39,9 +39,9 @@
         @apply text-[12px] font-semibold text-[#6F6F6F] uppercase mb-[14px];
     }
 
-    input {
-        @apply border border-bdr-primary w-full text-[#6F6F6F] text-[14px] rounded-[5px] leading-1.5 min-h-[42px] bg-white outline-none;
-        padding: 0.5rem 0.85rem;
+    input,
+    select {
+        @apply border border-bdr-primary w-full text-[#6F6F6F] text-[14px] rounded-[5px] leading-1.5 min-h-[42px] bg-white px-3 py-2 outline-none;
         box-shadow: 0px 4px 4px 0px rgba(219, 219, 219, 0.2509803922);
     }
 
@@ -63,10 +63,25 @@
     .btn-primary {
         @apply w-full text-[14px] font-semibold bg-primary/85 hover:bg-primary text-white py-2 px-[14px] rounded-[5px] transition-all ease-in-out duration-300 cursor-pointer
     }
+
+    .btn-secondary {
+        @apply w-full text-[14px] font-semibold bg-secondary/85 hover:bg-secondary text-white py-2 px-[14px] rounded-[5px] transition-all ease-in-out duration-300 cursor-pointer
+    }
 }
 
 @utility scrollbar-hidden {
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+
+/* Custom pagination bullets */
+.custom-pagination .swiper-pagination-bullet {
+    @apply w-2 h-2 bg-gray-400 opacity-50 transition-all duration-300 rounded-full;
+}
+
+/* Active bullet */
+.custom-pagination .swiper-pagination-bullet-active {
+    @apply bg-secondary opacity-100 scale-125;
 }

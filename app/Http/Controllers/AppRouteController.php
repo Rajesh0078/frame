@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -67,7 +68,8 @@ class AppRouteController extends Controller
 
     public function adminBanners(Request $request): Response
     {
-        return Inertia::render('AdminBanners');
+        $banners = Banner::with(['creator', 'updater'])->orderBy('order')->get();
+        return Inertia::render('AdminBanners',compact('banners'));
     }
 
     public function adminCoupons(Request $request): Response

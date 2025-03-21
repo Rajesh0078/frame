@@ -45,9 +45,9 @@ const Login = () => {
             <Head><title>Login</title></Head>
             <div className='h-svh bg-[#F4F4F4] flex-center px-[6%]'>
                 <div className='w-full sm:w-[500px] sm:bg-white sm:shadow sm:px-10 sm:py-8 rounded-[5px]'>
-                    <div className='w-full flex-center mb-8 font-bold gap-2 text-[22px] text-dark'>
+                    <Link href='/' className='w-full flex-center mb-8 font-bold gap-2 text-[22px] text-dark'>
                         <img src={Logo} alt="" className='w-[180px]' />
-                    </div>
+                    </Link>
                     <h2 className='mb-1'>Sign In</h2>
                     <p className='mb-4'>Access the frame up account using your email and password.</p>
                     <form onSubmit={handleSubmit(loginHandler)}>

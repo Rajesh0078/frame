@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppRouteController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,4 +38,8 @@ Route::prefix('api')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('api.login');
     Route::post('/logout', [AuthController::class, 'logout'])->name('api.logout');
     Route::post('/users/register', [UserController::class, 'createOrUpdateUser'])->name('users.createOrUpdate');
+    Route::get('/banners', [BannerController::class, 'index']);
+    Route::post('/banners', [BannerController::class, 'store']);
+    Route::put('/banners/{banner}', [BannerController::class, 'update']);
+    Route::delete('/banners/{banner}', [BannerController::class, 'destroy']);
 });
